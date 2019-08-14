@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import Fetch from 'isomorphic-unfetch';
+import 'isomorphic-unfetch';
 import OptionCard from './OptionCard';
+// import GetData from './GetData';
+// import retrieveElevatorData from '../data/retrieveElevatorData';
 
 export default class Form extends Component {
   constructor() {
@@ -15,14 +17,31 @@ export default class Form extends Component {
 
     this.changeSelected = this.changeSelected.bind(this);
   }
+  // static async getInitialProps({ req }) {
+  //   return {
+  //     session: await NextAuth.init({ req }), // Add this.props.session to all pages
+  //     lang: 'en' // Add a lang property to all pages for accessibility
+  //   };
+  // }
+
+  // const res = await fetch('https://jsonplaceholder.typicode.com/todos/1');
+  // const data = await res.json;
+  // console.log(data);
+  // return data;
+  // res.text().then(data => {
+  // console.log('biiiitch', data);
+  // });
+  // }
 
   changeSelected(id) {
     this.setState({
-      isClicked: true,
       stationClicked: this.state.matches[id].station,
       subwayClicked: this.state.matches[id].subways,
       matches: []
     });
+
+    // retrieveElevatorData();
+    // GetData();
   }
 
   onChange = async e => {
@@ -39,9 +58,24 @@ export default class Form extends Component {
     this.setState({ matches: matches });
   };
 
+  // async componentDidMount() {
+  //   const response = await fetch(
+  //     'http://web.mta.info/developers/data/nyct/nyct_ene.xml',
+  //     {
+  //       method: 'GET',
+  //       headers: {
+  //         'access-control-allow-origin': '*',
+  //         'Content-type': 'application/json; charset=UTF-8'
+  //       }
+  //     }
+  //   );
+  //   console.log('response');
+  // }
+
   render() {
     const matches = this.state.matches;
-
+    let isClicked = this.state.isClicked;
+    // if (isClicked) {
     return (
       <>
         <form>
@@ -67,5 +101,20 @@ export default class Form extends Component {
         })}
       </>
     );
+
+    // } else {
+    //   return (
+    //     <>
+    //       <form>
+    //         <input
+    //           type="text"
+    //           name="station"
+    //           onChange={this.onChange.bind(this)}
+    //         />
+    //       </form>
+    //       {}
+    //     </>
+    //   );
+    // }
   }
 }
