@@ -17,12 +17,6 @@ export default class Form extends Component {
 
     this.changeSelected = this.changeSelected.bind(this);
   }
-  // static async getInitialProps({ req }) {
-  //   return {
-  //     session: await NextAuth.init({ req }), // Add this.props.session to all pages
-  //     lang: 'en' // Add a lang property to all pages for accessibility
-  //   };
-  // }
 
   // const res = await fetch('https://jsonplaceholder.typicode.com/todos/1');
   // const data = await res.json;
