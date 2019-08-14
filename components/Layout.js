@@ -5,6 +5,7 @@ const Layout = props => (
   <>
     <Head>
       <title>Can I Get There</title>
+      <script src="../data/retrieveElevatorData" />
     </Head>
     <Navbar />
     {props.children}
