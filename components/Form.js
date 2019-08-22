@@ -2,30 +2,23 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import 'isomorphic-unfetch';
 import OptionCard from './OptionCard';
+import axios from 'axios';
 // import GetData from './GetData';
 // import retrieveElevatorData from '../data/retrieveElevatorData';
 
 export default class Form extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       query: '',
       matches: [],
       isClicked: false,
-      stationClicked: null
+      stationClicked: null,
+      subwayClicked: null
     };
 
     this.changeSelected = this.changeSelected.bind(this);
   }
-
-  // const res = await fetch('https://jsonplaceholder.typicode.com/todos/1');
-  // const data = await res.json;
-  // console.log(data);
-  // return data;
-  // res.text().then(data => {
-  // console.log('biiiitch', data);
-  // });
-  // }
 
   changeSelected(id) {
     this.setState({
@@ -33,9 +26,8 @@ export default class Form extends Component {
       subwayClicked: this.state.matches[id].subways,
       matches: []
     });
-
-    // retrieveElevatorData();
-    // GetData();
+    console.log('aaaa', this.state);
+    this.props.showElevatorStatus(this.state.matches[id].station);
   }
 
   onChange = async e => {
@@ -52,24 +44,9 @@ export default class Form extends Component {
     this.setState({ matches: matches });
   };
 
-  // async componentDidMount() {
-  //   const response = await fetch(
-  //     'http://web.mta.info/developers/data/nyct/nyct_ene.xml',
-  //     {
-  //       method: 'GET',
-  //       headers: {
-  //         'access-control-allow-origin': '*',
-  //         'Content-type': 'application/json; charset=UTF-8'
-  //       }
-  //     }
-  //   );
-  //   console.log('response');
-  // }
-
   render() {
     const matches = this.state.matches;
     let isClicked = this.state.isClicked;
-    // if (isClicked) {
     return (
       <>
         <form>
@@ -81,10 +58,6 @@ export default class Form extends Component {
         </form>
         {matches.map((each, i) => {
           return (
-            // <li onClick={this.changeSelected} key={i}>
-            //   {each.station}
-            //   {each.subways}
-            // </li>
             <OptionCard
               id={i}
               station={each.station}
@@ -95,20 +68,5 @@ export default class Form extends Component {
         })}
       </>
     );
-
-    // } else {
-    //   return (
-    //     <>
-    //       <form>
-    //         <input
-    //           type="text"
-    //           name="station"
-    //           onChange={this.onChange.bind(this)}
-    //         />
-    //       </form>
-    //       {}
-    //     </>
-    //   );
-    // }
   }
 }
