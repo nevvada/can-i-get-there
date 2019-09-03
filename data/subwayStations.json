@@ -1,0 +1,123 @@
+[
+  {
+    "station": "14th St - Union Square",
+    "subways": ["L", "N", "Q", "R", "W"],
+    "location": [
+      "Northeast corner of 14th Street and Park Avenue South (Union Square East"
+    ],
+    "notes": [
+      "Ramp near elevator to L platform is not ADA accessible, use elevator."
+    ]
+  },
+  {
+    "station": "14th St - Eight Avenue",
+    "subways": ["A", "C", "E", "L"],
+    "location": ["Northwest corner of 14th Street and Eight Avenue"]
+  },
+  {
+    "station": "23rd Street",
+    "subways": ["6"],
+    "locations": [
+      "Northeast corner of 23rd Street and Park Avenue South (uptown)",
+      "Northwest corner of 23rd Street and Park Avenue South (downtown)"
+    ]
+  },
+  {
+    "station": "28th Street",
+    "subways": ["6"],
+    "locations": ["Southwest corner of 28th Street and Park Avenue South"],
+    "notes": ["Accessible elevator is only for southbound trains."]
+  },
+  {
+    "station": "34th Street - Herald Square",
+    "subways": ["B", "D", "F", "M", "N", "Q", "R", "W"],
+    "locations": [
+      "At Herald Center building on west side of Broadway south of 34th Street"
+    ],
+    "notes": ["Ramps are not ADA accessible, use elevators."]
+  },
+  {
+    "station": "34th Street - Penn Station",
+    "subways": ["1", "2", "3"],
+    "locations": [
+      "On south side of 34th Street west of Seventh Avenue at LIRR entrance"
+    ]
+  },
+  {
+    "station": "34th Street - Penn Station",
+    "subways": ["A", "C", "E"],
+    "locations": [
+      "On south side of 34th Street wesst of 7th Avenue at LIRR entrance"
+    ]
+  },
+  {
+    "station": "34th Street - Hudson Yards",
+    "subways": ["7"],
+    "locations": [
+      "On Southwest corner of 34th Street and 10th Avenue in the park next to the main entrance. From upper mezzanine take either of two inclined elevators to the lower mezzanine then follow the accessible path to the elevator from lower mezzanine to the platform level"
+    ]
+  },
+  {
+    "station": "42nd Street - Port Authority Bus Terminal",
+    "subways": ["A", "C", "E"],
+    "locations": [
+      "Inside north wing of bus terminal (Eight Avenue between 41st Street and 42nd Street) near airport bus ticket office"
+    ],
+    "notes": [
+      "Passageway to Times Square - 42nd Street subway station is stair-free but contains ramps; however these ramps are not ADA compliant"
+    ]
+  },
+  {
+    "station": "47th - 50th Streets - Rockefeller Center",
+    "subways": ["B", "D", "F", "M"],
+    "locations": ["At the northwest corner of 6th Avenue and 49 Street"]
+  },
+  {
+    "station": "49th Street",
+    "subways": ["N", "Q", "R", "W"],
+    "locations": ["At northeast corner of 49th Street and Seventh Avenue"],
+    "notes": [
+      "Accessible elevator is only for northbound trains.",
+      "Elevator operates automatically between 7 AM and 12 AM. Push button to right of elevator for access at other times."
+    ]
+  },
+  {
+    "station": "50th Street",
+    "subways": ["C", "E"],
+    "locations": ["On north side of 49th Street west of Eighth Avenue."],
+    "notes": "Accessible elevator is only for southbound trains."
+  },
+  {
+    "station": "51st Street",
+    "subways": ["6", "4"],
+    "locations": ["At northeast corner of 52nd Street and Lexington Avenue"],
+    "notes": [
+      "4 train serves station between 12:30 AM and 5 AM.",
+      "Passageway to Lexington Avenue - 53rd Street subway station is accessible."
+    ]
+  },
+  {
+    "station": "59th Street - Columbus Circle",
+    "subways": ["A", "B", "C", "D", "1", "2"],
+    "locations": [
+      "On northwest corner of Columbus Circle and Central Park West",
+      "On southwest corner of Eigth Avenue and Columbus Circle"
+    ],
+    "notes": ["2 train serves station between 12:30 AM and 5:30 AM."]
+  },
+  {
+    "station": "66th Street - Lincoln Center",
+    "subways": ["1", "2"],
+    "locations": [
+      "Southwest corner of 66th Street and Broadway (downtown)",
+      "Southeast corner of 66th Street and Broadway (uptown)"
+    ]
+  },
+  {
+    "station": "42 St - Grand Central",
+    "subways": ["4", "5", "6", "7"],
+    "locations": [
+      "To mezzanine inside main entrance, immediately to right of Grand Central Terminal (East 42nd Street between Park Avenue and Lexington Avenue)."
+    ]
+  }
+]

@@ -1,0 +1,81 @@
+.option-card {
+  margin: auto;
+  padding: 2em;
+  width: 50%;
+
+  &:hover {
+    cursor: pointer;
+    border: 2px dotted black;
+    background-color: white;
+  }
+}
+
+.subway-station {
+  font-size: 2em;
+  display: block;
+  margin-bottom: 1em;
+}
+
+.subway-lines {
+  display: block;
+}
+
+.subway-line {
+  font-family: Helvetica, sans-serif;
+  margin: 0.8em;
+  padding: 0.8em;
+  font-size: 1em;
+  font-weight: 900;
+  border-radius: 50%;
+  height: 2em;
+}
+
+.blue-line {
+  background: #0039a6;
+  color: white;
+}
+
+.orange-line {
+  background: #ff6319;
+  color: white;
+}
+
+.lightgreen-line {
+  background: #6cbe45;
+  color: white;
+}
+
+.brown-line {
+  background: #996633;
+  color: white;
+}
+
+.lightgrey-line {
+  background: #a7a9ac;
+  color: white;
+}
+
+.yellow-line {
+  background: #fccc0a;
+  color: black;
+}
+
+.darkgrey-line {
+  background: #808183;
+  color: white;
+}
+
+.red-line {
+  background: #ee352e;
+  color: white;
+}
+
+.green-line {
+  background: #00933c;
+  color: white;
+}
+
+.purple-line {
+  background: #b933ad;
+  color: white;
+}

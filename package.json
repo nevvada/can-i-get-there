@@ -4,7 +4,7 @@
   "description": "This is an accessibility tool to help people find out if MTA subway stations have operational ADA-compliant elevators.",
   "main": "index.js",
   "scripts": {
-    "dev": "next",
+    "dev": "node server/server.js",
     "build": "next build",
     "start": "next start"
   },
@@ -20,15 +20,21 @@
   },
   "homepage": "https://github.com/nlemast/can-i-get-there#readme",
   "dependencies": {
+    "@zeit/next-css": "^1.0.1",
     "axios": "^0.19.0",
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "fs": "0.0.1-security",
     "isomorphic-unfetch": "^3.0.0",
     "next": "^9.0.3",
+    "node-sass": "^4.12.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "xml-js": "^1.6.11",
     "xml2json": "^0.11.2"
+  },
+  "devDependencies": {
+    "@zeit/next-sass": "^1.0.1",
+    "file-system": "^2.2.2"
   }
 }

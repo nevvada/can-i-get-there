@@ -1,0 +1,17 @@
+<svg width="75" height="75" xmlns="http://www.w3.org/2000/svg">
+ <title>Fichier 10</title>
+
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="77" width="77" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <path fill="#008000" id="svg_3" d="m37.5,75a37.5,37.5 0 1 1 37.5,-37.5a37.54,37.54 0 0 1 -37.5,37.5zm0,-72a34.5,34.5 0 1 0 34.5,34.5a34.54,34.54 0 0 0 -34.5,-34.5z"/>
+  <path fill="#008000" id="svg_4" d="m26.76,29.2a5.71,5.71 0 1 1 -5.7,-5.71a5.7,5.7 0 0 1 5.7,5.71z"/>
+  <path fill="#008000" id="svg_5" d="m61,29.2a5.71,5.71 0 1 1 -5.71,-5.71a5.7,5.7 0 0 1 5.71,5.71z"/>
+  <path fill="#008000" id="svg_6" d="m50.46,41.83a1.48,1.48 0 0 0 -1.21,-0.61l-22.15,0a1.48,1.48 0 0 0 -1.21,0.61a1.46,1.46 0 0 0 -0.22,1.34c1.5,4.73 6.59,9.62 12.51,9.62s11,-4.89 12.5,-9.62a1.46,1.46 0 0 0 -0.22,-1.34zm-12.28,8.89a9.59,9.59 0 0 1 -5.9,-2.21a10,10 0 0 1 11.79,0a9.58,9.58 0 0 1 -5.89,2.21z"/>
+  <text id="svg_7" font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif" font-weight="bold" font-size="5px" fill="#000000" y="90" x="0">Created by Jonathan Wnty</text>
+  <text id="svg_8" font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif" font-weight="bold" font-size="5px" fill="#000000" y="95" x="0">from the Noun Project</text>
+ </g>
+</svg>

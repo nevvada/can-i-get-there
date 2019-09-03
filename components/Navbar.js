@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 const Navbar = () => (
-  <>
+  <nav>
     <ul>
       <li>
         <Link href="/">Home</Link>
@@ -13,10 +13,9 @@ const Navbar = () => (
 
     <style jsx>{`
       ul {
-        background: #f3f3f3;
-        color: #fff;
         list-style: none;
         display: flex;
+        justify-content: flex-end;
       }
 
       ul li {
@@ -29,7 +28,7 @@ const Navbar = () => (
         text-decoration: none;
       }
     `}</style>
-  </>
+  </nav>
 );
 
 export default Navbar;
