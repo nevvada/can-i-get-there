@@ -1,0 +1,66 @@
+.form-styles {
+  text-align: center;
+
+  form {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.blinking-cursor {
+  // display: none;
+  font-weight: 100;
+  font-size: 50px;
+  color: #2e3d48;
+  animation-duration: 1s;
+  animation-name: blink;
+  animation-iteration-count: infinite;
+  animation-timing-function: step-end;
+  transform: translateY(50%);
+  position: absolute;
+}
+
+@keyframes blink {
+  from,
+  to {
+    color: transparent;
+  }
+  50% {
+    color: black;
+  }
+}
+
+.directions {
+  position: absolute;
+}
+
+input[type='text'] {
+  height: 2em;
+  border: none;
+  border-color: transparent;
+  background: inherit;
+  border-bottom: 3px solid black;
+  font-family: inherit;
+  font-size: 3em;
+  text-align: center;
+  width: 15%;
+  transition-property: width;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+input[type='text']:focus {
+  width: 50%;
+  transition: all 0.3s ease-in;
+}
+
+input[type='text']:focus + span {
+  display: none;
+}
+
+input[type='text']:focus + span + span {
+  display: none;
+}
