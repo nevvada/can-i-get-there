@@ -3,10 +3,11 @@ const next = require('next');
 const bodyParser = require('body-parser');
 const axios = require('axios');
 const bodyParser = require('body-parser');
+const express = require('express');
+const path = require('path');
 
-const PORT = process.env.PORT || 3000;
-const dev = process.env.NODE_ENV !== 'production';
-const nextApp = next({ dev });
+const app = express();
+const xmlParser = new xml2js.Parser({ explicitArray: false });
 
 app.use(bodyParser.urlencoded({
   extended: false
@@ -14,6 +15,16 @@ app.use(bodyParser.urlencoded({
 
 app.use(bodyParser.json())
 
+app.use('/build', (req, res) =>
+  res.sendFile(path.join(__dirname, '../build/bundle.js'))
+);
+
+app.get('/', (req, res) =>
+  res
+    .status(200)
+    .type('html')
+    .sendFile(path.join(__dirname, '../index.html'))
+);
 
     app.get('/elevators', (req, res) => {
       axios
@@ -22,16 +33,8 @@ app.use(bodyParser.json())
         .catch(err => console.error(err));
     });
 
-    app.get('*', (req, res) => {
-      return handle(req, res);
-    });
+const PORT = 3000;
 
-    app.listen(PORT, err => {
-      if (err) throw err;
-      console.log(`Ready at ${PORT}`);
-    });
-  })
-  .catch(ex => {
-    console.error(ex.stack);
-    process.exit(1);
+app.listen(PORT, () => {
+  console.log(`Listening on ${PORT}...`);
   });
