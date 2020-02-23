@@ -2,11 +2,12 @@
   "name": "can-i-get-there",
   "version": "1.0.0",
   "description": "This is an accessibility tool to help people find out if MTA subway stations have operational ADA-compliant elevators.",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
-    "dev": "node server/server.js",
-    "build": "next build",
-    "start": "next start"
+    "dev": "webpack-dev-server",
+    "build": "webpack",
+    "start": "node server/server.js",
+    "test": "jest --no-cache --watch"
   },
   "repository": {
     "type": "git",
