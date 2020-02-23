@@ -1,10 +1,8 @@
-const express = require('express');
-const next = require('next');
-const bodyParser = require('body-parser');
 const axios = require('axios');
 const bodyParser = require('body-parser');
 const express = require('express');
 const path = require('path');
+const xml2js = require('xml2js');
 
 const app = express();
 const xmlParser = new xml2js.Parser({ explicitArray: false });
@@ -26,15 +24,23 @@ app.get('/', (req, res) =>
     .sendFile(path.join(__dirname, '../index.html'))
 );
 
-    app.get('/elevators', (req, res) => {
-      axios
-        .get('http://web.mta.info/developers/data/nyct/nyct_ene.xml')
-        .then(result => res.send(xmlParser.toJson(result.data)))
-        .catch(err => console.error(err));
-    });
+app.get('/elevators', (req, res) => {
+  console.log('hit it')
+  axios
+    .get('http://web.mta.info/developers/data/nyct/nyct_ene.xml')
+    .then(response => {
+      // console.log('ressss', res.data)
+      const parsedXML = xmlParser.parseString(response.data, (err, result) => {
+        console.log('ressss', result)
+        res.send(result);
+      });
+    })
+    // .then(result => {console.log('woah', result)})
+    .catch(err => console.error(err));
+});
 
 const PORT = 3000;
 
 app.listen(PORT, () => {
   console.log(`Listening on ${PORT}...`);
-  });
+});
