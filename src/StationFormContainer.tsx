@@ -5,8 +5,15 @@ import StationForm from './StationForm';
 
 import stationsAPI from '../data/subway_stations';
 
+import { Station } from './typings/subwayStation';
+
+interface State {
+  searchedStations: Station[];
+  selectedStation: string;
+}
+
 class StationFormContainer extends Component {
-  state = {
+  state: State = {
     searchedStations: [],
     selectedStation: '',
   };
