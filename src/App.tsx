@@ -24,7 +24,7 @@ export class App extends Component {
 
   render() {
     return (
-      <>
+      <div className="app-wrapper">
         {/* <Meta /> */}
         {/* <Navbar /> */}
 
@@ -36,7 +36,7 @@ export class App extends Component {
           />
         </header>
         <StationFormContainer />
-      </>
+      </div>
     );
   }
 }

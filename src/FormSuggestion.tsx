@@ -48,10 +48,10 @@ const FormSuggestion = ({ stationInfo }: Props) => {
   const { stationName, subwayLines } = stationInfo;
 
   return (
-    <>
+    <article className="form-suggestion">
       <h2>{stationName}</h2>
       {renderSubwayLineLogos(subwayLines)}
-    </>
+    </article>
   );
 };
 

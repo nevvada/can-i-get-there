@@ -47,11 +47,11 @@ class StationFormContainer extends Component {
 
   render() {
     return (
-      <>
+      <main className="station-form-container">
         <h2>This is the station form container.</h2>
         <StationForm findStation={this.findStation} />
         {this.renderSuggestions()}
-      </>
+      </main>
     )
   }
 }
