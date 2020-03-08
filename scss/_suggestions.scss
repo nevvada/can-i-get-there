@@ -1,8 +1,9 @@
-.suggestions-container {
+.form-suggestions-container {
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 60%;
   font-family: Helvetica, Arial, sans-serif;
+  margin-top: 2rem;
 }
 
 .form-suggestion {
@@ -10,6 +11,11 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+
+  &:hover {
+    cursor: pointer;
+    border: 1px dotted black;
+  }
 
   & h2 {
     font-weight: 100;

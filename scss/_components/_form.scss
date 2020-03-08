@@ -35,27 +35,27 @@
   position: absolute;
 }
 
-input[type='text'] {
-  height: 2em;
-  border: none;
-  border-color: transparent;
-  background: inherit;
-  border-bottom: 3px solid black;
-  font-family: inherit;
-  font-size: 3em;
-  text-align: center;
-  width: 15%;
-  transition-property: width;
+// input[type='text'] {
+//   height: 2em;
+//   border: none;
+//   border-color: transparent;
+//   background: inherit;
+//   border-bottom: 3px solid black;
+//   font-family: inherit;
+//   font-size: 3em;
+//   text-align: center;
+//   width: 15%;
+//   transition-property: width;
 
-  &:hover {
-    cursor: pointer;
-  }
-}
+//   &:hover {
+//     cursor: pointer;
+//   }
+// }
 
-input[type='text']:focus {
-  width: 50%;
-  transition: all 0.3s ease-in;
-}
+// input[type='text']:focus {
+//   width: 50%;
+//   transition: all 0.3s ease-in;
+// }
 
 input[type='text']:focus + span {
   display: none;
