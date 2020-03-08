@@ -10,14 +10,18 @@ import stationsAPI from '../data/subway_stations';
 import { Station } from './typings/subwayStation';
 
 interface State {
+  elevatorStatuses: any[];
   searchedStations: Station[];
   selectedStation: string;
+  selectedStationStatus: Object;
 }
 
 class StationFormContainer extends Component {
   state: State = {
+    elevatorStatuses: [],
     searchedStations: [],
     selectedStation: '',
+    selectedStationStatus: {},
   };
 
   componentDidMount() {
@@ -87,7 +91,7 @@ class StationFormContainer extends Component {
       <main className="station-form-container">
         <StationForm findStation={this.findStation} />
         <section className="form-suggestions-container">
-        {this.renderSuggestions()}
+          {this.renderSuggestions()}
         </section>
       </main>
     )
