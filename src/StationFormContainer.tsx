@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import axios from 'axios';
+import get from 'lodash.get';
 
 import FormSuggestion from './FormSuggestion';
 import StationForm from './StationForm';
@@ -17,6 +19,16 @@ class StationFormContainer extends Component {
     searchedStations: [],
     selectedStation: '',
   };
+
+  componentDidMount() {
+    axios
+      .get('/elevators')
+      .then(res => {
+        const elevatorStatuses = get(res, 'data.NYCOutages.outage', []);
+        this.setState({ elevatorStatuses });
+      })
+      .catch(err => console.error(err));
+  }
 
   componentDidUpdate(prevState) {
     const { selectedStation } = this.state;
