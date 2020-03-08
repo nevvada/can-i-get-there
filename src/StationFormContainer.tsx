@@ -52,20 +52,31 @@ class StationFormContainer extends Component {
     // this.setState({ selectedStationStatus: matching })
   }
 
+  setSelectedStation = (station: string) => {
+    this.setState({ selectedStation: station });
+  }
+
   renderSuggestions = () => {
     const { searchedStations } = this.state;
 
     return searchedStations.length 
-      ? searchedStations.map(station => <FormSuggestion stationInfo={station} />)
-      : <div />
+      ? searchedStations.map(station => (
+        <FormSuggestion 
+          setSelectedStation={this.setSelectedStation}
+          stationInfo={station}
+        />)
+      ) : <div />
   }
 
   render() {
+    const { selectedStation } = this.state;
+
     return (
       <main className="station-form-container">
-        <h2>This is the station form container.</h2>
         <StationForm findStation={this.findStation} />
+        <section className="form-suggestions-container">
         {this.renderSuggestions()}
+        </section>
       </main>
     )
   }
