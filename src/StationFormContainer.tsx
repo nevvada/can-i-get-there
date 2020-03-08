@@ -18,6 +18,15 @@ class StationFormContainer extends Component {
     selectedStation: '',
   };
 
+  componentDidUpdate(prevState) {
+    const { selectedStation } = this.state;
+    const { selectedStation: prevSelectedStation } = prevState;
+
+    if (selectedStation !== prevSelectedStation) {
+      this.getElevatorStatus();
+    }
+  }
+
   findStation = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { target: { value } } = event;
 
@@ -33,8 +42,14 @@ class StationFormContainer extends Component {
     this.setState({ searchedStations: matchesToDisplay });
   }
 
-  setSelectedStationAndFetchElevatorStatus = (station) => {
-    this.setState({ selectedStation });
+  getElevatorStatus = () => {
+    const { elevatorStatuses, selectedStation } = this.state;
+
+    const matching = elevatorStatuses.find(elevatorStatus => {
+      return elevatorStatus.station.match(selectedStation, 'gi');
+    })
+
+    // this.setState({ selectedStationStatus: matching })
   }
 
   renderSuggestions = () => {
