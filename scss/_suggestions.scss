@@ -11,13 +11,18 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-
-  &:hover {
-    cursor: pointer;
-    border: 1px dotted black;
-  }
+  box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+  transition: box-shadow 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
 
   & h2 {
     font-weight: 100;
   }
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    background-color: white;
+  }
+
 }
