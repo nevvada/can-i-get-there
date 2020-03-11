@@ -1,12 +1,24 @@
+@import "./device-widths";
+
 .form-suggestions-container {
   display: flex;
   flex-direction: column;
-  width: 60%;
+  width: 80%;
   font-family: Helvetica, Arial, sans-serif;
   margin-top: 2rem;
+
+  @media (min-width: 990px) {
+    width: 60%;
+
+}
+
+  @media (min-width: 660px) {
+    width: 70%;
+  }
 }
 
 .form-suggestion {
+  margin: 0.5em;
   display: flex;
   flex-direction: row;
   justify-content: center;
